@@ -1,0 +1,1182 @@
+Analysis & Synthesis report for quartus_yosys
+Sat Feb 17 15:16:32 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sat Feb 17 15:16:32 2024           ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; quartus_yosys                               ;
+; Top-level Entity Name              ; top                                         ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; top                ; quartus_yosys      ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 32          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-32        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Sat Feb 17 15:16:31 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off quartus_yosys -c quartus_yosys
+Info (11104): Parallel Compilation has detected 32 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 16 of the 24 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file src/wrap_to_zero_block.v
+    Info (12023): Found entity 1: Wrap_To_Zero_block
+Info (12021): Found 1 design units, including 1 entities, in source file src/wrap_to_zero.v
+    Info (12023): Found entity 1: Wrap_To_Zero
+Info (12021): Found 1 design units, including 1 entities, in source file src/top.v
+    Info (12023): Found entity 1: top
+Warning (10335): Unrecognized synthesis attribute "cells_not_processed" at src/Subsystem_yosys.v(3)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(4)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(7)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(9)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(11)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(13)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(15)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(17)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(19)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(21)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(23)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(25)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(27)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(29)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(31)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(33)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(35)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(37)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(39)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(41)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(43)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(45)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(47)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(49)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(51)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(53)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(55)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(57)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(59)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(61)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(63)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(65)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(67)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(69)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(71)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(73)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(75)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(77)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(79)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(81)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(83)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(85)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(87)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(89)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(91)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(93)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(95)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(97)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(99)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(101)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(103)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(105)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(107)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(109)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(111)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(113)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(115)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(117)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(119)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(121)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(123)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(125)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(127)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(129)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(131)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(133)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(135)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(137)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(139)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(141)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(143)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(145)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(147)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(149)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(151)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(153)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(155)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(157)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(159)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(161)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(163)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(165)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(167)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(169)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(171)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(173)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(175)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(177)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(179)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(181)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(183)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(185)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(187)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(189)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(191)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(193)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(195)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(197)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(199)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(201)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(203)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(205)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(207)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(209)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(211)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(213)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(215)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(217)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(219)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(221)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(223)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(225)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(227)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(229)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(231)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(233)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(235)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(237)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(239)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(241)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(243)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(245)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(247)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(249)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(251)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(253)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(255)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(257)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(259)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(261)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(263)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(265)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(267)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(269)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(271)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(273)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(275)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(277)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(279)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(281)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(283)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(285)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(287)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(289)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(291)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(293)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(295)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(297)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(299)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(301)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(303)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(305)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(307)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(309)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(311)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(313)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(315)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(317)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(319)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(321)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(323)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(325)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(327)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(329)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(331)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(333)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(335)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(337)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(339)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(341)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(343)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(345)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(347)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(349)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(351)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(353)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(355)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(357)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(359)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(361)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(363)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(365)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(367)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(369)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(371)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(373)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(375)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(377)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(379)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(381)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(383)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(385)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(387)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(389)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(391)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(393)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(395)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(397)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(399)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(401)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(403)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(405)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(407)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(409)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(411)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(413)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(415)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(417)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(419)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(421)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(423)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(425)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(427)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(429)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(431)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(433)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(435)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(437)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(439)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(441)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(443)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(445)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(447)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(449)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(451)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(453)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(455)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(457)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(459)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(461)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(463)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(465)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(467)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(469)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(471)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(473)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(475)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(477)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(479)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(481)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(483)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(485)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(487)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(489)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(491)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(493)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(495)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(497)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(499)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(501)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(503)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(505)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(507)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(509)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(511)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(513)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(515)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(517)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(519)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(521)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(523)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(525)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(527)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(529)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(531)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(533)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(535)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(537)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(539)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(541)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(543)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(545)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(547)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(549)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(551)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(553)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(555)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(557)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(559)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(561)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(563)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(565)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(567)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(569)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(572)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(574)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(577)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(579)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(581)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(583)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(585)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(587)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(589)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(591)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(593)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(595)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(597)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(599)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(601)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(603)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(605)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(607)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(609)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(611)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(613)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(615)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(617)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(619)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(621)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(623)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(625)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(627)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(629)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(631)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(633)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(635)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(637)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(639)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(641)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(643)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(645)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(647)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(649)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(651)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(653)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(655)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(657)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(659)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(661)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(663)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(665)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(667)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(669)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(671)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(673)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(675)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(677)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(679)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(681)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(683)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(685)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(687)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(689)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(691)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(693)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(695)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(697)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(699)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(701)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(703)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(705)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(707)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(709)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(711)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(713)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(715)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(718)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(721)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(724)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(726)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(728)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(730)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(732)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(734)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(736)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(738)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(740)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(742)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(744)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(746)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(748)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(750)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(752)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(754)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(756)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(758)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(760)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(762)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(764)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(766)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(768)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(770)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(772)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(774)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(776)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(778)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(780)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(782)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(784)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(786)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(788)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(790)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(792)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(794)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(796)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(798)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(800)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(802)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(804)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(806)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(808)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(810)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(812)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(814)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(816)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(818)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(820)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(822)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(824)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(826)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(828)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(830)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(832)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(834)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(836)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(838)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(840)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(842)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(844)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(846)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(848)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(850)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(852)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(854)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(856)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(858)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(860)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(862)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(864)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(866)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(868)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(870)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(872)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(874)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(876)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(878)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(880)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(882)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(884)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(886)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(888)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(890)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(892)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(894)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(896)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(898)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(900)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(902)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(904)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(906)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(908)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(910)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(912)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(914)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(916)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(918)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(920)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(922)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(924)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(926)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(928)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(930)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(932)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(934)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(936)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(938)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(940)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(942)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(944)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(946)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(948)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(950)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(952)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(954)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(956)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(958)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(960)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(962)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(964)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(966)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(968)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(970)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(972)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(974)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(976)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(978)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(980)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(982)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(984)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(986)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(988)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(990)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(992)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(994)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(996)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(998)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1000)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1002)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1004)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1006)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1008)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1010)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1012)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1014)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1016)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1018)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1020)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1022)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1024)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1026)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1028)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1030)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1032)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1034)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1036)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1038)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1040)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1042)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1044)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1046)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1048)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1050)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1052)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1054)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1056)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1058)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1060)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1062)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1064)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1066)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1068)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1070)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1072)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1074)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1076)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1078)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1080)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1082)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1084)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1086)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1088)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1090)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1092)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1094)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1096)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1098)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1100)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1102)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1104)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1106)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1108)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1110)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1112)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1114)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1116)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1118)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1120)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1122)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1124)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1126)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1128)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1130)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1132)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1134)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1136)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1138)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1140)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1142)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1144)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1146)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1148)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1150)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1152)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1154)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1156)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1158)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1160)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1162)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1164)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1166)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1169)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1172)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1174)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1176)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1178)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1180)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1182)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1184)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1186)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1188)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1190)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1192)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1194)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1196)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1198)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1200)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1202)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1204)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1207)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1208)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1209)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1210)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1211)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1212)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1213)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1214)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1215)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1216)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1217)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1218)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1219)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1220)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1221)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1222)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1223)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1224)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1225)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1226)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1227)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1228)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1229)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1230)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1231)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1232)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1233)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1234)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1235)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1236)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1237)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1238)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1239)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1240)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1241)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1242)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1243)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1244)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1245)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1246)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1247)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1248)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1249)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1250)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1251)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1252)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1253)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1254)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1255)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1256)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1257)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1258)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1259)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1260)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1261)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1262)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1263)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1264)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1265)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1266)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1267)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1268)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1269)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1270)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1271)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1272)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1273)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1274)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1275)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1276)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1277)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1278)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1279)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1280)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1281)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1282)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1283)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1284)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1285)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1286)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1287)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1288)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1289)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1290)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1291)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1292)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1293)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1294)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1302)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1303)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1309)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1310)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1315)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1316)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1321)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1322)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1328)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1329)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1335)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1336)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1342)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1343)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1348)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1349)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1355)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1356)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1362)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1363)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1368)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1369)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1376)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1377)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1384)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1385)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1390)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1391)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1396)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1397)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1402)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1403)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1408)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1409)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1414)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1415)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1420)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1421)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1426)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1427)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1432)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1433)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1438)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1439)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1445)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1446)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1452)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1453)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1458)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1459)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1464)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1465)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1473)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1474)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1479)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1480)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1486)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1487)
+Warning (10335): Unrecognized synthesis attribute "module_not_derived" at src/Subsystem_yosys.v(1495)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1496)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1592)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1604)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1633)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1645)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1674)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1686)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1715)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1727)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1756)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1768)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1797)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1809)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1838)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1850)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1878)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1890)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1908)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1920)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1949)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1961)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1987)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(1991)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2009)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2021)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2050)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2062)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2091)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2103)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2132)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2144)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2173)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2185)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2214)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2226)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2255)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2267)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2296)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2308)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2337)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2349)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2378)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2390)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2419)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2431)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2459)
+Warning (10335): Unrecognized synthesis attribute "src" at src/Subsystem_yosys.v(2471)
+Info (12021): Found 1 design units, including 1 entities, in source file src/subsystem_yosys.v
+    Info (12023): Found entity 1: Subsystem_2
+Info (12021): Found 1 design units, including 1 entities, in source file src/subsystem.v
+    Info (12023): Found entity 1: Subsystem_1
+Info (12021): Found 1 design units, including 1 entities, in source file src/positive.v
+    Info (12023): Found entity 1: Positive
+Info (12021): Found 1 design units, including 1 entities, in source file src/nonnegative.v
+    Info (12023): Found entity 1: Nonnegative
+Info (12021): Found 1 design units, including 1 entities, in source file src/increment_real_world_block.v
+    Info (12023): Found entity 1: Increment_Real_World_block
+Info (12021): Found 1 design units, including 1 entities, in source file src/increment_real_world.v
+    Info (12023): Found entity 1: Increment_Real_World
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct_block7.v
+    Info (12023): Found entity 1: DotProduct_block7
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct_block6.v
+    Info (12023): Found entity 1: DotProduct_block6
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct_block5.v
+    Info (12023): Found entity 1: DotProduct_block5
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct_block4.v
+    Info (12023): Found entity 1: DotProduct_block4
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct_block3.v
+    Info (12023): Found entity 1: DotProduct_block3
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct_block2.v
+    Info (12023): Found entity 1: DotProduct_block2
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct_block1.v
+    Info (12023): Found entity 1: DotProduct_block1
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct_block.v
+    Info (12023): Found entity 1: DotProduct_block
+Info (12021): Found 1 design units, including 1 entities, in source file src/dotproduct.v
+    Info (12023): Found entity 1: DotProduct
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk194.v
+    Info (12023): Found entity 1: cfblk194
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk193.v
+    Info (12023): Found entity 1: cfblk193
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk192.v
+    Info (12023): Found entity 1: cfblk192
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk191.v
+    Info (12023): Found entity 1: cfblk191
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk190.v
+    Info (12023): Found entity 1: cfblk190
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk189.v
+    Info (12023): Found entity 1: cfblk189
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk188.v
+    Info (12023): Found entity 1: cfblk188
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk186.v
+    Info (12023): Found entity 1: cfblk186
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk185.v
+    Info (12023): Found entity 1: cfblk185
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk178.v
+    Info (12023): Found entity 1: cfblk178
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk148.v
+    Info (12023): Found entity 1: cfblk148
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk111.v
+    Info (12023): Found entity 1: cfblk111
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk79.v
+    Info (12023): Found entity 1: cfblk79
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk61.v
+    Info (12023): Found entity 1: cfblk61
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk43.v
+    Info (12023): Found entity 1: cfblk43
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk42.v
+    Info (12023): Found entity 1: cfblk42
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk28.v
+    Info (12023): Found entity 1: cfblk28
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk20.v
+    Info (12023): Found entity 1: cfblk20
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk11.v
+    Info (12023): Found entity 1: cfblk11
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk7.v
+    Info (12023): Found entity 1: cfblk7
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk5.v
+    Info (12023): Found entity 1: cfblk5
+Info (12021): Found 1 design units, including 1 entities, in source file src/cfblk1.v
+    Info (12023): Found entity 1: cfblk1
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top.v(9): object "result" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at top.v(16): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "Subsystem_1" for hierarchy "Subsystem_1:Subsystem_1"
+Warning (10036): Verilog HDL or VHDL warning at Subsystem.v(78): object "cfblk107_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem.v(103): object "cfblk46_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem.v(150): object "cfblk91_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem.v(157): object "cfblk25_out2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem.v(208): object "cfblk69_out2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem.v(215): object "cfblk26_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem.v(237): object "cfblk58_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem.v(284): object "cfblk167_out1" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(497): inferring latch(es) for variable "cfblk220_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(531): inferring latch(es) for variable "cfblk209_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(560): inferring latch(es) for variable "cfblk210_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(602): inferring latch(es) for variable "cfblk223_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(628): inferring latch(es) for variable "cfblk204_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(654): inferring latch(es) for variable "cfblk212_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(698): inferring latch(es) for variable "cfblk216_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(759): inferring latch(es) for variable "cfblk214_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(847): inferring latch(es) for variable "cfblk203_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(893): inferring latch(es) for variable "cfblk224_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(978): inferring latch(es) for variable "cfblk207_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1066): inferring latch(es) for variable "cfblk211_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1119): inferring latch(es) for variable "cfblk219_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1150): inferring latch(es) for variable "cfblk217_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1176): inferring latch(es) for variable "cfblk222_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1234): inferring latch(es) for variable "cfblk206_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1280): inferring latch(es) for variable "cfblk218_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1302): inferring latch(es) for variable "cfblk213_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1348): inferring latch(es) for variable "cfblk205_t_1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem.v(1370): inferring latch(es) for variable "cfblk215_t_1", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "cfblk186" for hierarchy "Subsystem_1:Subsystem_1|cfblk186:u_cfblk186"
+Info (12128): Elaborating entity "Increment_Real_World_block" for hierarchy "Subsystem_1:Subsystem_1|cfblk186:u_cfblk186|Increment_Real_World_block:u_Increment_Real_World"
+Info (12128): Elaborating entity "Wrap_To_Zero_block" for hierarchy "Subsystem_1:Subsystem_1|cfblk186:u_cfblk186|Wrap_To_Zero_block:u_Wrap_To_Zero"
+Info (12128): Elaborating entity "cfblk178" for hierarchy "Subsystem_1:Subsystem_1|cfblk178:u_cfblk178"
+Info (12128): Elaborating entity "cfblk189" for hierarchy "Subsystem_1:Subsystem_1|cfblk189:u_cfblk189"
+Info (12128): Elaborating entity "cfblk42" for hierarchy "Subsystem_1:Subsystem_1|cfblk42:u_cfblk42"
+Info (12128): Elaborating entity "cfblk188" for hierarchy "Subsystem_1:Subsystem_1|cfblk188:u_cfblk188"
+Info (12128): Elaborating entity "cfblk185" for hierarchy "Subsystem_1:Subsystem_1|cfblk185:u_cfblk185"
+Info (12128): Elaborating entity "Increment_Real_World" for hierarchy "Subsystem_1:Subsystem_1|cfblk185:u_cfblk185|Increment_Real_World:u_Increment_Real_World"
+Info (12128): Elaborating entity "Wrap_To_Zero" for hierarchy "Subsystem_1:Subsystem_1|cfblk185:u_cfblk185|Wrap_To_Zero:u_Wrap_To_Zero"
+Info (12128): Elaborating entity "cfblk111" for hierarchy "Subsystem_1:Subsystem_1|cfblk111:u_cfblk111"
+Info (12128): Elaborating entity "cfblk5" for hierarchy "Subsystem_1:Subsystem_1|cfblk5:u_cfblk5"
+Info (12128): Elaborating entity "Positive" for hierarchy "Subsystem_1:Subsystem_1|cfblk5:u_cfblk5|Positive:u_Positive"
+Info (12128): Elaborating entity "DotProduct_block5" for hierarchy "Subsystem_1:Subsystem_1|DotProduct_block5:u_cfblk35_inst"
+Info (12128): Elaborating entity "cfblk194" for hierarchy "Subsystem_1:Subsystem_1|cfblk194:u_cfblk194"
+Info (12128): Elaborating entity "cfblk148" for hierarchy "Subsystem_1:Subsystem_1|cfblk148:u_cfblk148"
+Info (12128): Elaborating entity "cfblk79" for hierarchy "Subsystem_1:Subsystem_1|cfblk79:u_cfblk79"
+Info (12128): Elaborating entity "DotProduct_block4" for hierarchy "Subsystem_1:Subsystem_1|DotProduct_block4:u_cfblk173_inst"
+Info (12128): Elaborating entity "cfblk192" for hierarchy "Subsystem_1:Subsystem_1|cfblk192:u_cfblk192"
+Info (12128): Elaborating entity "DotProduct" for hierarchy "Subsystem_1:Subsystem_1|DotProduct:u_cfblk103_inst"
+Info (12128): Elaborating entity "cfblk7" for hierarchy "Subsystem_1:Subsystem_1|cfblk7:u_cfblk7"
+Info (12128): Elaborating entity "Nonnegative" for hierarchy "Subsystem_1:Subsystem_1|cfblk7:u_cfblk7|Nonnegative:u_Nonnegative"
+Info (12128): Elaborating entity "DotProduct_block6" for hierarchy "Subsystem_1:Subsystem_1|DotProduct_block6:u_cfblk41_inst"
+Info (12128): Elaborating entity "cfblk1" for hierarchy "Subsystem_1:Subsystem_1|cfblk1:u_cfblk1"
+Info (12128): Elaborating entity "cfblk190" for hierarchy "Subsystem_1:Subsystem_1|cfblk190:u_cfblk190"
+Info (12128): Elaborating entity "cfblk20" for hierarchy "Subsystem_1:Subsystem_1|cfblk20:u_cfblk20"
+Info (12128): Elaborating entity "DotProduct_block1" for hierarchy "Subsystem_1:Subsystem_1|DotProduct_block1:u_cfblk119_inst"
+Info (12128): Elaborating entity "DotProduct_block2" for hierarchy "Subsystem_1:Subsystem_1|DotProduct_block2:u_cfblk124_inst"
+Info (12128): Elaborating entity "cfblk43" for hierarchy "Subsystem_1:Subsystem_1|cfblk43:u_cfblk43"
+Info (12128): Elaborating entity "cfblk28" for hierarchy "Subsystem_1:Subsystem_1|cfblk28:u_cfblk28"
+Info (12128): Elaborating entity "DotProduct_block" for hierarchy "Subsystem_1:Subsystem_1|DotProduct_block:u_cfblk118_inst"
+Info (12128): Elaborating entity "cfblk11" for hierarchy "Subsystem_1:Subsystem_1|cfblk11:u_cfblk11"
+Info (12128): Elaborating entity "DotProduct_block3" for hierarchy "Subsystem_1:Subsystem_1|DotProduct_block3:u_cfblk166_inst"
+Info (12128): Elaborating entity "cfblk191" for hierarchy "Subsystem_1:Subsystem_1|cfblk191:u_cfblk191"
+Info (12128): Elaborating entity "cfblk61" for hierarchy "Subsystem_1:Subsystem_1|cfblk61:u_cfblk61"
+Info (12128): Elaborating entity "cfblk193" for hierarchy "Subsystem_1:Subsystem_1|cfblk193:u_cfblk193"
+Info (12128): Elaborating entity "DotProduct_block7" for hierarchy "Subsystem_1:Subsystem_1|DotProduct_block7:u_cfblk66_inst"
+Info (12128): Elaborating entity "Subsystem_2" for hierarchy "Subsystem_2:Subsystem_2"
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(588): object "cfblk107_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(636): object "cfblk133_div_temp" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(640): object "cfblk133_t_0_0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(674): object "cfblk160_div_temp" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(678): object "cfblk160_t_0_0" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(684): object "cfblk167_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(1037): object "cfblk25_out2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(1039): object "cfblk26_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(1065): object "cfblk46_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(1085): object "cfblk58_out1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(1101): object "cfblk69_out2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Subsystem_yosys.v(1151): object "cfblk91_out1" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1587): inferring latch(es) for variable "_182_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1628): inferring latch(es) for variable "_190_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1669): inferring latch(es) for variable "_188_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1710): inferring latch(es) for variable "_192_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1751): inferring latch(es) for variable "_178_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1792): inferring latch(es) for variable "_189_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1833): inferring latch(es) for variable "_184_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1874): inferring latch(es) for variable "_173_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1903): inferring latch(es) for variable "_177_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(1944): inferring latch(es) for variable "_186_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2004): inferring latch(es) for variable "_191_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2045): inferring latch(es) for variable "_180_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2086): inferring latch(es) for variable "_181_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2127): inferring latch(es) for variable "_193_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2168): inferring latch(es) for variable "_176_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2209): inferring latch(es) for variable "_183_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2250): inferring latch(es) for variable "_187_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2291): inferring latch(es) for variable "_185_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2332): inferring latch(es) for variable "_175_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2373): inferring latch(es) for variable "_194_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2414): inferring latch(es) for variable "_179_", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Subsystem_yosys.v(2455): inferring latch(es) for variable "_174_", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "_174_[0]" at Subsystem_yosys.v(2468)
+Info (10041): Inferred latch for "_174_[1]" at Subsystem_yosys.v(2468)
+Info (10041): Inferred latch for "_174_[2]" at Subsystem_yosys.v(2468)
+Info (10041): Inferred latch for "_174_[3]" at Subsystem_yosys.v(2468)
+Info (10041): Inferred latch for "_174_[4]" at Subsystem_yosys.v(2468)
+Info (10041): Inferred latch for "_174_[5]" at Subsystem_yosys.v(2468)
+Info (10041): Inferred latch for "_174_[6]" at Subsystem_yosys.v(2468)
+Info (10041): Inferred latch for "_174_[7]" at Subsystem_yosys.v(2468)
+Error (10028): Can't resolve multiple constant drivers for net "cfblk187_out1[7]" at Subsystem_yosys.v(2000) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2000
+Error (10029): Constant driver at Subsystem_yosys.v(1997) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 1997
+Error (10028): Can't resolve multiple constant drivers for net "cfblk187_out1[6]" at Subsystem_yosys.v(2000) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2000
+Error (10028): Can't resolve multiple constant drivers for net "cfblk187_out1[5]" at Subsystem_yosys.v(2000) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2000
+Error (10028): Can't resolve multiple constant drivers for net "cfblk187_out1[4]" at Subsystem_yosys.v(2000) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2000
+Error (10028): Can't resolve multiple constant drivers for net "cfblk187_out1[3]" at Subsystem_yosys.v(2000) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2000
+Error (10028): Can't resolve multiple constant drivers for net "cfblk187_out1[2]" at Subsystem_yosys.v(2000) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2000
+Error (10028): Can't resolve multiple constant drivers for net "cfblk187_out1[1]" at Subsystem_yosys.v(2000) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2000
+Error (10028): Can't resolve multiple constant drivers for net "cfblk187_out1[0]" at Subsystem_yosys.v(2000) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2000
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[0][7]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (10029): Constant driver at Subsystem_yosys.v(2360) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2360
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[0][6]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[0][5]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[0][4]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[0][3]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[0][2]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[0][1]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[0][0]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (10028): Can't resolve multiple constant drivers for net "cfblk203_reg[1][7]" at Subsystem_yosys.v(2366) File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/Subsystem_yosys.v Line: 2366
+Error (12152): Can't elaborate user hierarchy "Subsystem_2:Subsystem_2" File: E:/Verilog_verify/bug_submit/yosys_1/sysverilog_quartus_yosys/src/top.v Line: 11
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 20 errors, 856 warnings
+    Error: Peak virtual memory: 4678 megabytes
+    Error: Processing ended: Sat Feb 17 15:16:32 2024
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:00
+
+
